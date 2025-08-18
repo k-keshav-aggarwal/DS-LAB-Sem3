@@ -7,7 +7,7 @@ int main()
 
     cout<<"Please Enter the Number of elemnts you want in the new array ";
     cin>>n;
-    for(int i = 0; i < n ; i++)
+    for(i = 0; i < n ; i++)
     {
         cout<<"\nElement "<<i+1<<" ";
         cin>>a[i];
@@ -15,7 +15,7 @@ int main()
     cout<<"Array Created Successfully";
 
     cout<<"THe Currently stored Array is:\n";
-    for(int i = 0; i < n;i++)
+    for(i = 0; i < n;i++)
         cout<<a[i]<<"\n";
     cout<<"End of Array \n";
     
@@ -34,7 +34,7 @@ int main()
     }
     
     cout<<"THe Currently stored Array is:\n";
-    for(int i = 0; i < n;i++)
+    for(i = 0; i < n;i++)
         cout<<a[i]<<"\n";
     cout<<"End of Array";
 }

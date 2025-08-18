@@ -28,9 +28,9 @@ void Insert(int a[], int &n)
     cin>>pos;
     pos--;
     for (i = n; i > pos ; i--)
-        a[i+1]=a[i];
-    cout<<"Enter the No you want to add to index : "<<i<<" or Positon : "<<i+1 <<"\n";
-    cin>>a[i];
+        a[i]=a[i-1];
+    cout<<"Enter the No you want to add to index : "<<pos<<" or Positon : "<<pos+1 <<"\n";
+    cin>>a[pos];
     n++;
     cout<<"Inserted Successfully \n";
 }
@@ -38,9 +38,9 @@ void Insert(int a[], int &n)
 void Delete(int a[] , int &n)
 {
     int pos;
-    cout<<"Enter the element you want to from the array ";
+    cout<<"Enter the position you want to delete from the array ";
     cin>>pos;
-    for(int i = pos; i < n; i++)
+    for(int i = pos-1; i < n-1; i++)
         a[i]=a[i+1];
     n--;
     cout<<"Deletion Successful \n";
@@ -58,7 +58,7 @@ void LinSearch(int a[], int &n)
         cout<<"Number not found";
         return;
     }
-    cout<<"Number found at Position "<<a[i]<<"\n";
+    cout<<"Number found at Position "<<i+1<<"\n";
 }
 
 void Exit(int &option)
