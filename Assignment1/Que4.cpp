@@ -38,6 +38,51 @@ void MultiplyMat()
             cin>>a[i][j];
         }
     }
+
+    int b[5][5], result[5][5];
+    cout << "Enter elements for second 5x5 matrix:\n";
+    for(int i = 0; i < 5 ; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            cout << "Element " << i+1 << "," << j+1 << " : ";
+            cin >> b[i][j];
+        }
+    }
+    
+    cout << "First 5x5 matrix:\n";
+    for(int i = 0; i < 5; i++) 
+    {
+        for(int j = 0; j < 5; j++)
+            cout << a[i][j] << " ";
+        cout << endl;
+    }
+
+    cout << "Second 5x5 matrix:\n";
+    for(int i = 0; i < 5; i++) 
+    {
+        for(int j = 0; j < 5; j++)
+            cout << b[i][j] << " ";
+        cout << endl;
+    }
+    
+    for(int i = 0; i < 5; i++)
+    {
+        for(int j = 0; j < 5; j++)
+        {
+            result[i][j] = 0;
+            for(int k = 0; k < 5; k++)
+                result[i][j] += a[i][k] * b[k][j];
+        }
+    }
+
+    cout << "Resultant Matrix after multiplication:\n";
+    for(int i = 0; i < 5; i++)
+    {
+        for(int j = 0; j < 5; j++)
+            cout << result[i][j] << " ";
+        cout << endl;
+    }
 }
 
 void Transpose()
