@@ -1,22 +1,20 @@
 #include <iostream>
 using namespace std;
 
-void generateBinary(int n)
+void genBin(int n)
 {
     for (int num = 1; num <= n; num++)
     {
         int temp = num;
-        char binary[32];
+        char bin[32];
         int index = 0;
         while (temp > 0)
         {
-            binary[index++] = (temp % 2) ? '1' : '0';
+            bin[index++] = (temp % 2) ? '1' : '0';
             temp /= 2;
         }
         for (int i = index - 1; i >= 0; i--)
-        {
-            cout << binary[i];
-        }
+            cout << bin[i];
         cout << " ";
     }
     cout << endl;
@@ -25,6 +23,6 @@ void generateBinary(int n)
 int main()
 {
     int n = 6;
-    generateBinary(n);
+    genBin(n);
     return 0;
 }

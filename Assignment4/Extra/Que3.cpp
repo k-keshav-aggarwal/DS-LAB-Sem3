@@ -68,11 +68,9 @@ bool checkSorted(Queue &q)
     while (!q.isEmpty())
     {
         int front = q.dequeue();
-        front == expected ? expected++ :
-        (!st.isEmpty() && st.peek() == expected ? (st.pop(), expected++) :
-        (!st.isEmpty() && st.peek() < front ? (expected = -1) :
-        st.push(front)));
-        if (expected == -1) break;
+        front == expected ? expected++ : (!st.isEmpty() && st.peek() == expected ? (st.pop(), expected++) : (!st.isEmpty() && st.peek() < front ? (expected = -1) : st.push(front)));
+        if (expected == -1)
+            break;
     }
     while (!st.isEmpty() && st.peek() == expected)
     {
